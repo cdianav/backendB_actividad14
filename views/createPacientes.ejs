@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD MySQL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+          CRUD - Node.js, Express, MySQL, EJS
+        </div>
+        <header>
+       
+          <div class="logo">
+           Hospital TakeCare 
+            </div>
+            <nav>
+              <a href="/home">Inicio</a>  <!-- enlaces a pestañas--> 
+              <a href="/createDoctors">Registro Doctores</a>
+              <a href="/listDoctores">Lista Doctores</a>
+             <a href="/createPacientes">Registro Pacientes</a>
+             <a href="/listPacientes">Lista Pacientes</a>
+             <a href="/createCita">Agendamiento de citas</a>
+             
+     </nav>
+    </header>
+        <div class="card-body">
+          <h5 class="card-title">Adicionar Pacientes</h5>
+          <p class="card-text">
+
+            <form action="/salvarpaciente" method="POST">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Nombre</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="nombre" name="nombre" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Ingrese su nombre.
+                  </span>
+                </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Apellidos</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="apellidos" name="apellidos" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Ingrese sus apellidos.
+                  </span>
+                </div>
+              </div>
+
+              
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Documento</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="documento" name="documento" min="1" max="12345678" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Ingrese su número de documento.
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Edad</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="edad" name="edad" min="12" max="123" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Ingrese su edad
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Teléfono</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="telefono" name="telefono" min="1234567" max="1234578910" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Ingrese su número telefónico
+                  </span>
+                </div>
+              </div>
+
+              
+
+
+              <button type="submit" class="btn btn-primary">Guardar</button>
+              <a href="/" class="btn btn-secondary">Cancelar</a>
+            </form>
+
+          </p>
+          
+        </div>
+        <div class="card-footer text-body-secondary">
+          Curso BackEnd Básico - Grupo 2
+        </div>
+      </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
